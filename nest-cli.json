@@ -1,0 +1,72 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/user-api/src",
+  "monorepo": true,
+  "root": "apps/user-api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/user-api/tsconfig.json"
+  },
+  "projects": {
+    "@app/user-api": {
+      "type": "application",
+      "root": "apps/user-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-api/tsconfig.json"
+      }
+    },
+    "@tools/eslint.config": {
+      "type": "library",
+      "root": "tools/eslint",
+      "entryFile": ".eslintrc.json",
+      "sourceRoot": "tools/eslint"
+    },
+    "@libs/modules": {
+      "type": "library",
+      "root": "libs/modules",
+      "entryFile": "index",
+      "sourceRoot": "libs/modules",
+      "compilerOptions": {
+        "tsConfigPath": "libs/modules/tsconfig.json"
+      }
+    },
+    "@libs/core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.json"
+      }
+    },
+    "@libs/utils": {
+      "type": "library",
+      "root": "libs/utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/utils",
+      "compilerOptions": {
+        "tsConfigPath": "libs/utils/tsconfig.json"
+      }
+    },
+    "property-api": {
+      "type": "application",
+      "root": "apps/property-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/property-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/property-api/tsconfig.app.json"
+      }
+    },
+    "blockchain-api": {
+      "type": "application",
+      "root": "apps/blockchain-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/blockchain-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/blockchain-api/tsconfig.app.json"
+      }
+    }
+  }
+}
